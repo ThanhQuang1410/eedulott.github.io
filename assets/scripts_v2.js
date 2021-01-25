@@ -4,9 +4,9 @@ for (var i = 1; i <= 45; i++) {
 };
 var index = 1;
 let arr = [];
-
+var allowPress = true;
 function generateNumber() {
-    $("#button-gen").prop('disabled', true);
+    allowPress = false;
     let r = Math.floor(Math.random() * numbers.length) + 1;
     var desired = numbers[index];
     if(numbers.indexOf(r) !== -1)  desired = numbers[r];
@@ -22,7 +22,7 @@ function generateNumber() {
             index++;
             var indexOfDesired = numbers.indexOf(desired);
             numbers.splice(indexOfDesired, 1);
-            $("#button-gen").prop('disabled', false);
+            allowPress = true;
             output.text(desired); // Print desired number in case it stopped at a different one due to duration expiration
         } else {
             output.text(
@@ -31,3 +31,8 @@ function generateNumber() {
         }
     }, 30);
 }
+$(document).on('keypress',function(e) {
+    if(e.which == 13 && allowPress) {
+        generateNumber()
+    }
+});
