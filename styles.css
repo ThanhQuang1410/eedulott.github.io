@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Cocon";
+    src: url("assets/Cocon-Bold-Font.otf");
+}
+body {
+
+    background: url("assets/bg_eedulott.png")  no-repeat fixed 0 0 / cover;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+
+}
+
+h1 {
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    font-family: 'Cocon';
+}
+
+p {
+    font-size: 18px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    width: 50px;
+    border-top: 2px solid #ccc;
+    margin: 20px auto 25px auto;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.3);
+    font-size: 54px;
+    color: white;
+    line-height: 118px;
+    text-align: center;
+    border: 2px solid white;
+    font-weight: bold;
+}
+.btn-info {
+    color: #ffffff;
+    background-image: #7c318763;
+    background-image: linear-gradient(to right, #7c318780, #2fb3d3);
+    font-weight: bold;
+    border: none;
+    background-color: unset;
+}
